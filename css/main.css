@@ -126,15 +126,14 @@ table td {
 }
 
 :root {
-  --font-family: "Raleway", sans-serif;
+  --font-family: "Manrope", sans-serif;
   --second-family: "Open Sans", sans-serif;
+  --third-family: "Russo One", sans-serif;
+  --font3: "Source Sans Pro", sans-serif;
   --transition: all 0.2s ease-in-out;
   --transition05: all 0.5s ease-in-out;
   --transitionbtn: all 0.8s cubic-bezier(.4,0,.2,1);
-  --black: #202020;
-  --blue: #2063cc;
-  --orange: #e8491f;
-  --orange-bg: #fee2db;
+  --black: #0c0c0d;
 }
 
 body {
