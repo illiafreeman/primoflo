@@ -95,66 +95,25 @@ if ($('[data-fancybox]').length) {
 }
 /*end certificate increase size*/
 
+/*isInViewport*/
+$.fn.isInViewport = function () {
+var elementTop = $(this).offset().top,
+    elementBottom = elementTop + $(this).outerHeight(),
+    viewportTop = $(window).scrollTop(),
+    viewportBottom = viewportTop + $(window).height();
+    (viewportBottom > elementTop) ? $(this).addClass('inViewport') : $(this).removeClass('inViewport');
+}
 
-$(document).ready(function () {
-    function scrollEvent() {
-        var elementTop = $('.form').offset().top,
-            elementBottom = elementTop + $('.form').outerHeight(),
-            viewportTop = $(window).scrollTop(),
-            viewportBottom = viewportTop + $(window).height();
-        
-        (viewportBottom > elementTop) ? $('.form').addClass('inViewport') : $('.form').removeClass('inViewport');
-            
-            
-        
-    }
-    scrollEvent();
-    $(window).on('resize scroll', function () {
-        scrollEvent();
+const checkInViewportElements = document.querySelectorAll('.checkInViewport');
+    checkInViewportElements.forEach(function (el) {
+        $(el).isInViewport();
+    });
+$(window).on('resize scroll', function () {
+    checkInViewportElements.forEach(function (el) {
+        $(el).isInViewport();
     });
 });
-
-
-
-
-
-function isInViewport() {
-    var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-    var isIn = elementBottom > viewportTop && elementTop < viewportBottom;
-
-    if (isIn) {
-        this.addClass('inViewport');
-    } // else {
-    //   this.removeClass('inViewport');
-    // }
-
-
-    return isIn;
-};
-
-
-// $(document).ready(function () {
-//     var checkInViewportElements = document.querySelectorAll('.checkInViewport');
-//         checkInViewportElements.forEach(function (el) {
-//             $(el).isInViewport();
-//         });
-// });
-// $(window).on('resize scroll', function () {
-//     checkInViewportElements.forEach(function (el) {
-//         $(el).isInViewport();
-//     });
-// });
-
-
-
-
-
-
-
-
+/*wnd isInViewport*/
 
 /*fixed header*/
 $(window).scroll(function () {
