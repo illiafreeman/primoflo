@@ -103,11 +103,10 @@ var elementTop = $(this).offset().top,
     viewportBottom = viewportTop + $(window).height();
     (viewportBottom > elementTop) ? $(this).addClass('inViewport') : $(this).removeClass('inViewport');
     if(viewportBottom > elementTop){
-        console.log('0');
+        //console.log('0');
     }else{
-        console.log(elementTop - viewportBottom);
+        //console.log(elementTop - viewportBottom);
     }
-    //console.log(viewportBottom - elementTop);
 }
 
 const checkInViewportElements = document.querySelectorAll('.checkInViewport');
@@ -119,7 +118,7 @@ $(window).on('resize scroll', function () {
         $(el).isInViewport();
     });
 });
-/*wnd isInViewport*/
+/*end isInViewport*/
 
 /*fixed header*/
 $(window).scroll(function () {
