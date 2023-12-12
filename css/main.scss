@@ -55,6 +55,7 @@ textarea {
     outline-style: none !important;
     -moz-outline-style: none !important;
     border: 0;
+    padding: 0;
 }
 
 p {
@@ -330,6 +331,17 @@ body {
     z-index: 100;
     background: var(--gray);
     z-index: 1000;
+    position: relative;
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        width: calc(200%);
+        height: 1px;
+        background: var(--bordercolor);
+        bottom: 0;
+        left: 0;
+    }
     &__contaner {
         width: 100%;
         max-width: 1864px;
@@ -458,14 +470,37 @@ body {
         grid-template: 1fr / 150px auto;
         height: 72px;
     }
-    &__search {}
-    &__search-input {}
+    &__search-wrap {}
+    &__search {
+        display: grid;
+        grid-template: 1fr / auto 72px;
+    }
+    &__search-input {
+        height: 72px;
+        border: 1px solid transparent;
+        padding: 0 30px;
+    }
     &__search-btn {
         background: var(--blue);
+        transition: var(--transition);
+        border: 1px solid transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 71px;
         svg, img{
             width: 24px;
             height: 24px;
             fill: transparent;
+            stroke: #fff;
+            transition: var(--transition);
+        }
+        &:hover{
+            background: var(--gray);
+            border-color: var(--blue);
+            svg{
+                stroke: var(--blue);
+            }
         }
     }
     &__header {}
@@ -478,6 +513,7 @@ body {
     align-items: center;
     padding-left: 64px;
     position: relative;
+    border-right: 1px solid var(--bordercolor);
     cursor: pointer;
     transition: var(--transition);
     svg{
