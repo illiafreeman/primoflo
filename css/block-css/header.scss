@@ -5,12 +5,12 @@
     right: 0;
     transition: (var(--transition));
     z-index: 100;
-    background: #F2F6FF;
+    //background: #F2F6FF;
     z-index: 1000;
     &.fixed {
         border-radius: 0px 0px 16px 16px;
         box-shadow: 0px 14px 30px 0px rgba(32, 99, 204, 0.1);
-        background: #fff;
+        //background: #fff;
     }
 
     &__logo {

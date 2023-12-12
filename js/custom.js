@@ -102,6 +102,12 @@ var elementTop = $(this).offset().top,
     viewportTop = $(window).scrollTop(),
     viewportBottom = viewportTop + $(window).height();
     (viewportBottom > elementTop) ? $(this).addClass('inViewport') : $(this).removeClass('inViewport');
+    if(viewportBottom > elementTop){
+        console.log('0');
+    }else{
+        console.log(elementTop - viewportBottom);
+    }
+    //console.log(viewportBottom - elementTop);
 }
 
 const checkInViewportElements = document.querySelectorAll('.checkInViewport');
