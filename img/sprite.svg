@@ -21,4 +21,30 @@
             <path d="M21 21L16.7 16.7" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
     </symbol>
+    <symbol id="icon_menu" viewBox="0 0 24 24">
+        <g>
+            <rect width="4.8" height="4.8"/>
+            <rect y="9.6001" width="4.8" height="4.8"/>
+            <rect y="19.2" width="4.8" height="4.8"/>
+            <rect x="9.59998" width="4.8" height="4.8"/>
+            <rect x="9.59998" y="9.6001" width="4.8" height="4.8"/>
+            <rect x="9.59998" y="19.2" width="4.8" height="4.8"/>
+            <rect x="19.2" width="4.8" height="4.8"/>
+            <rect x="19.2" y="9.6001" width="4.8" height="4.8"/>
+            <rect x="19.2" y="19.2" width="4.8" height="4.8"/>
+        </g>
+    </symbol>
+    <symbol id="icon_menu_active" viewBox="0 0 24 24">
+        <g>
+            <rect width="4.8" height="4.79999"/>
+            <rect y="19.2" width="4.8" height="4.79999"/>
+            <rect x="9.6001" y="9.6001" width="4.8" height="4.79999"/>
+            <rect x="19.2002" width="4.8" height="4.79999"/>
+            <rect x="19.2002" y="19.2" width="4.8" height="4.79999"/>
+            <rect x="5" y="5" width="4.8" height="4.79999"/>
+            <rect x="14" y="5" width="4.8" height="4.79999"/>
+            <rect x="14" y="14" width="4.8" height="4.79999"/>
+            <rect x="5" y="14" width="4.8" height="4.79999"/>
+        </g>
+    </symbol>
 </svg>

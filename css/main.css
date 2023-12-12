@@ -335,8 +335,8 @@ body {
 .header__contact {
   border-left: 1px solid var(--bordercolor);
   border-right: 1px solid var(--bordercolor);
-  flex-direction: column;
-  display: flex;
+  display: grid;
+  grid-template: 56px auto/1fr;
 }
 .header__mail {
   display: flex;
@@ -370,6 +370,7 @@ body {
   display: block;
   font-weight: 400;
   opacity: 0.4;
+  line-height: 1;
 }
 .header__nav {
   display: flex;
@@ -431,6 +432,11 @@ body {
 .header__btngroup li a:hover svg {
   stroke: #fff;
 }
+.header__cat-search {
+  display: grid;
+  grid-template: 1fr/150px auto;
+  height: 72px;
+}
 .header__search-btn {
   background: var(--blue);
 }
@@ -439,6 +445,38 @@ body {
   height: 24px;
   fill: transparent;
 }
+.cat-wrap {
+  display: flex;
+  align-items: center;
+  padding-left: 64px;
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.cat-wrap svg {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  width: 24px;
+  height: 24px;
+  fill: var(--red);
+  transition: var(--transition);
+}
+.cat-wrap svg:last-child {
+  opacity: 0;
+}
+.cat-wrap:hover {
+  background: var(--red);
+  color: #fff;
+}
+.cat-wrap:hover svg {
+  fill: #fff;
+  opacity: 0;
+}
+.cat-wrap:hover svg:last-child {
+  opacity: 1;
+}
+
 .cat {
   display: none;
 }
