@@ -20,6 +20,8 @@ label:focus {
 
 button {
   cursor: pointer;
+  border: 0;
+  padding: 0;
 }
 
 h1,
@@ -134,7 +136,9 @@ table td {
   --transition05: all 0.5s ease-in-out;
   --transitionbtn: all 0.8s cubic-bezier(.4,0,.2,1);
   --black: #0c0c0d;
+  --blue: #00265e;
   --gray: #efefef;
+  --bordercolor: #dcdcdc;
 }
 
 body {
@@ -159,7 +163,7 @@ body {
 }
 
 .main {
-  padding-top: 120px;
+  padding-top: 128px;
 }
 
 .contaner {
@@ -315,9 +319,42 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
-  grid-template: 1fr/repeat(12, 1fr);
+  grid-template: 128px/286px auto 216px;
   gap: 24px;
 }
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--bordercolor);
+}
+.header__logo .menu-btn {
+  display: none;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  height: 56px;
+}
+.header__menu {
+  display: flex;
+  gap: 56px;
+}
+.header__menu ul {
+  display: none;
+}
+.header__search-btn {
+  background: var(--blue);
+}
+.header__search-btn svg, .header__search-btn img {
+  width: 24px;
+  height: 24px;
+  fill: transparent;
+}
+.cat {
+  display: none;
+}
+
 @media only screen and (max-width: 1700px) {
   .contaner {
     width: 100%;

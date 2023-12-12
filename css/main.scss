@@ -19,6 +19,8 @@ label:focus {
 }
 button{
     cursor: pointer;
+    border: 0;
+    padding: 0;
 }
 
 h1,
@@ -132,7 +134,9 @@ table td {
     --transition05: all 0.5s ease-in-out;
     --transitionbtn: all 0.8s cubic-bezier(.4,0,.2,1);
     --black: #0c0c0d;
+    --blue: #00265e;
     --gray: #efefef;
+    --bordercolor: #dcdcdc;
 }
 
 body {
@@ -158,7 +162,7 @@ body {
 
 
 .main {
-    padding-top: 120px;
+    padding-top: 128px;
 }
 
 .contaner {
@@ -331,27 +335,58 @@ body {
         margin: 0 auto;
         padding: 0 20px;
         display: grid;
-        grid-template: 1fr / repeat(12, 1fr);
+        grid-template: 128px / 286px auto 216px;
         gap: 24px;
     }
-    &__logo {}
-    &__main {}
-    &__nav {}
-    &__menu {}
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid var(--bordercolor);
+        .menu-btn {
+            display: none;
+        }
+    }
+    &__main {
+        
+    }
+    &__contact {
+        
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        height: 56px;
+    }
+    &__menu {
+        display: flex;
+        gap: 56px;
+        ul{
+            display: none;
+        }
+    }
     &__btngroup {}
     &__cat-search {}
     &__search {}
     &__search-input {}
+    &__search-btn {
+        background: var(--blue);
+        svg, img{
+            width: 24px;
+            height: 24px;
+            fill: transparent;
+        }
+    }
     &__header {}
-    &__contact {}
+    
     &__mail {}
     &__tel {}
 }
-.menu-btn {
-}
+
 .cat-wrap {
 }
 .cat {
+    display: none;
 }
 .main {
 }
