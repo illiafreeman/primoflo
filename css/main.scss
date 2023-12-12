@@ -654,10 +654,9 @@ body {
             position: absolute;
             left: 100%;
             background: #fff;
-            padding: 12px 0;
+            padding: 0;
             transition: var(--transition);
             border: 1px solid var(--bordercolor);
-            border-top: 0;
             z-index: 100;
             top: 20px;
             opacity: 0;
@@ -681,14 +680,39 @@ body {
                         box-shadow: none;
                         color: var(--red);
                     }
+                    
+                }
+                ul{
+                    padding: 0px;
+                    li{
+                        a{
+                            padding: 6px 20px;
+                        } 
+                        &:first-child{
+                            a{
+                                padding-top: 16px;
+                            }
+                        }
+                    }
+                }
+                &:first-child{
+                    >a{
+                        padding-top: 16px;
+                    }
+                }
+                &:last-child{
+                    >a{
+                        padding-bottom: 16px;
+                    }
                 }
             }
         }
         &:hover{
             >ul{
-                top: 0;
+                top: -1px;
                 opacity: 1;
                 visibility: visible;
+                
             }
         }
         &:last-child{

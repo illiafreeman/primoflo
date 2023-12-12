@@ -628,10 +628,9 @@ body {
   position: absolute;
   left: 100%;
   background: #fff;
-  padding: 12px 0;
+  padding: 0;
   transition: var(--transition);
   border: 1px solid var(--bordercolor);
-  border-top: 0;
   z-index: 100;
   top: 20px;
   opacity: 0;
@@ -658,8 +657,23 @@ body {
   box-shadow: none;
   color: var(--red);
 }
+.cat li ul li ul {
+  padding: 0px;
+}
+.cat li ul li ul li a {
+  padding: 6px 20px;
+}
+.cat li ul li ul li:first-child a {
+  padding-top: 16px;
+}
+.cat li ul li:first-child > a {
+  padding-top: 16px;
+}
+.cat li ul li:last-child > a {
+  padding-bottom: 16px;
+}
 .cat li:hover > ul {
-  top: 0;
+  top: -1px;
   opacity: 1;
   visibility: visible;
 }
