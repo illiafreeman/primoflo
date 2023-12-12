@@ -47,4 +47,9 @@
             <rect x="5" y="14" width="4.8" height="4.79999"/>
         </g>
     </symbol>
+    <symbol id="icon_chevron" viewBox="0 0 8 14">
+        <g>
+            <path d="M1 1L7 7L1 13"/>
+        </g>
+    </symbol>
 </svg>
