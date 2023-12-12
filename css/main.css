@@ -322,7 +322,6 @@ body {
   padding: 0 20px;
   display: grid;
   grid-template: 128px/286px auto 216px;
-  gap: 24px;
 }
 .header__logo {
   display: flex;
@@ -333,27 +332,104 @@ body {
 .header__logo .menu-btn {
   display: none;
 }
+.header__contact {
+  border-left: 1px solid var(--bordercolor);
+  border-right: 1px solid var(--bordercolor);
+  flex-direction: column;
+  display: flex;
+}
+.header__mail {
+  display: flex;
+  height: 56px;
+  padding: 0 24px;
+  align-items: center;
+  transition: var(--transition);
+  font-weight: 700;
+}
+.header__mail:hover {
+  background: #fff;
+  color: var(--red);
+}
+.header__tel {
+  display: flex;
+  padding: 0 24px;
+  justify-content: center;
+  transition: var(--transition);
+  font-weight: 700;
+  flex-direction: column;
+}
+.header__tel:hover {
+  background: #fff;
+  color: var(--red);
+}
+.header__tel:hover span {
+  opacity: 0.4;
+  color: var(--black);
+}
+.header__tel span {
+  display: block;
+  font-weight: 400;
+  opacity: 0.4;
+}
 .header__nav {
   display: flex;
   justify-content: space-between;
   height: 56px;
-  border-bottom: 1px solid var(--bordercolor);
+  position: relative;
+}
+.header__nav:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: calc(100% + 216px);
+  height: 1px;
+  background: var(--bordercolor);
+  bottom: 0;
+  left: 0;
 }
 .header__menu {
   display: flex;
 }
 .header__menu li {
   display: flex;
-  align-items: center;
 }
 .header__menu li a {
+  display: flex;
+  align-items: center;
   padding: 0 22px;
   transition: var(--transition);
   font-size: 16px;
   line-height: 149%;
 }
 .header__menu li a:hover {
-  box-shadow: 0 0 2px 0px var(--red);
+  box-shadow: 0 -2px 0 0 var(--red) inset;
+}
+.header__btngroup {
+  display: flex;
+}
+.header__btngroup li {
+  display: flex;
+}
+.header__btngroup li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  transition: var(--transition);
+  border-left: 1px solid var(--bordercolor);
+}
+.header__btngroup li a svg {
+  fill: transparent;
+  width: 24px;
+  height: 24px;
+  stroke: var(--blue);
+  transition: var(--transition);
+}
+.header__btngroup li a:hover {
+  background: var(--red);
+}
+.header__btngroup li a:hover svg {
+  stroke: #fff;
 }
 .header__search-btn {
   background: var(--blue);

@@ -337,7 +337,7 @@ body {
         padding: 0 20px;
         display: grid;
         grid-template: 128px / 286px auto 216px;
-        gap: 24px;
+        //gap: 24px;
     }
     &__logo {
         display: flex;
@@ -352,31 +352,105 @@ body {
         
     }
     &__contact {
-        
+        border-left: 1px solid var(--bordercolor);
+        border-right: 1px solid var(--bordercolor);
+        flex-direction: column;
+        display: flex;
+    }
+    &__mail {
+        display: flex;
+        height: 56px;
+        padding: 0 24px;
+        align-items: center;
+        transition: var(--transition);
+        font-weight: 700;
+        &:hover{
+            background: #fff;
+            color: var(--red);
+        }
+    }
+    &__tel {
+        display: flex;
+        padding: 0 24px;
+        justify-content: center;
+        transition: var(--transition);
+        font-weight: 700;
+        flex-direction: column;
+        //height: 100%;
+        &:hover{
+            background: #fff;
+            color: var(--red);
+            span{
+                opacity: 0.4;
+                color: var(--black);
+            }
+        }
+        span{
+            display: block;
+            font-weight: 400;
+            opacity: 0.4;
+        }  
     }
     &__nav {
         display: flex;
         justify-content: space-between;
         height: 56px;
-        border-bottom: 1px solid var(--bordercolor);
+        position: relative;
+        &:after{
+            content: '';
+            display: block;
+            position: absolute;
+            width: calc(100% + 216px);
+            height: 1px;
+            background: var(--bordercolor);
+            bottom: 0;
+            left: 0;
+        }
     }
     &__menu {
         display: flex;
         li{
             display: flex;
-            align-items: center;
             a{
+                display: flex;
+                align-items: center;
                 padding: 0 22px;
                 transition: var(--transition);
                 font-size: 16px;
                 line-height: 149%;
                 &:hover{
-                    box-shadow: 0 0 2px 0px var(--red);
+                    box-shadow: 0 -2px 0 0 var(--red) inset;
                 }
             }
         }
     }
-    &__btngroup {}
+    &__btngroup {
+        display: flex;
+        li{
+            display: flex;
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 72px;
+                transition: var(--transition);
+                border-left: 1px solid var(--bordercolor);
+                svg{
+                    fill: transparent;
+                    width: 24px;
+                    height: 24px;
+                    stroke: var(--blue);
+                    transition: var(--transition);
+                }
+                &:hover{
+                    background: var(--red);
+                    svg{
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+    }
     &__cat-search {}
     &__search {}
     &__search-input {}
@@ -390,8 +464,7 @@ body {
     }
     &__header {}
     
-    &__mail {}
-    &__tel {}
+    
 }
 
 .cat-wrap {
