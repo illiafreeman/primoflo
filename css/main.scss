@@ -424,6 +424,7 @@ body {
         display: flex;
         li{
             display: flex;
+            position: relative;
             a{
                 display: flex;
                 align-items: center;
@@ -432,6 +433,48 @@ body {
                 font-size: 16px;
                 line-height: 149%;
                 &:hover{
+                    box-shadow: 0 -2px 0 0 var(--red) inset;
+                }
+            }
+            ul{
+                top: 110%;
+                opacity: 0;
+                visibility: hidden;
+                min-width: 280px;
+                max-width: 280px;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                left: 0;
+                background: #fff;
+                padding: 14px 0;
+                transition: var(--transition);
+                border: 1px solid var(--bordercolor);
+                z-index: 100;
+                li{
+                    display: flex;
+                    justify-content: stretch;
+                    a{
+                        padding: 10px 20px;
+                        display: flex;
+                        align-items: center;
+                        transition: var(--transition);
+                        width: 100%;
+                        line-height: 1.1;
+                        &:hover{
+                            color: var(--red);
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+            &:hover{
+                ul{
+                    top: 100%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+                >a{
                     box-shadow: 0 -2px 0 0 var(--red) inset;
                 }
             }
