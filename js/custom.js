@@ -1,6 +1,6 @@
 
 /*team carousel*/
-if($('.team__gal').length){
+if ($('.team__gal').length) {
     $('.team__gal').slick({
         slidesToShow: 8,
         slidesToScroll: 8,
@@ -33,17 +33,17 @@ if($('.team__gal').length){
             }
         ]
     });
-    $('.team__next').click(function() {
+    $('.team__next').click(function () {
         $('.team__gal').slick('slickNext');
     });
-    $('.team__prev').click(function() {
+    $('.team__prev').click(function () {
         $('.team__gal').slick('slickPrev');
     })
 }
 /*end team carousel*/
 
 /*certificate carousel*/
-if($('.review-gal').length){
+if ($('.review-gal').length) {
     const reviewGal = new Swiper('.review-gal', {
         slidesPerView: 1.5,
         spaceBetween: 20,
@@ -69,7 +69,7 @@ if($('.review-gal').length){
 /*end certificate carousel*/
 
 /*certificate increase size*/
-if($('[data-fancybox]').length){
+if ($('[data-fancybox]').length) {
     Fancybox.bind('[data-fancybox]', {
         compact: false,
         idle: false,
@@ -95,27 +95,70 @@ if($('[data-fancybox]').length){
 }
 /*end certificate increase size*/
 
-/*map*/
-const LOCATION = { center: [30.318303, 59.984976], zoom: 16 };
-const POINT = { title: '<strong>ул. Лисичанская, д. 6<strong>' };
-window.map = null;
-main();
-async function main() {
-    await ymaps3.ready;
-    const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer } = ymaps3;
-    const { YMapDefaultMarker } = await ymaps3.import('@yandex/ymaps3-markers@0.0.1');
-    map = new YMap(document.getElementById('map'), { location: LOCATION });
-    map.addChild((scheme = new YMapDefaultSchemeLayer()));
-    map.addChild(new YMapDefaultFeaturesLayer());
-    map.addChild(new YMapDefaultMarker({
-        coordinates: LOCATION.center,
-        title: POINT.title
-    }));
-}
-/*end map*/
+
+$(document).ready(function () {
+    function scrollEvent() {
+        var elementTop = $('.form').offset().top,
+            elementBottom = elementTop + $('.form').outerHeight(),
+            viewportTop = $(window).scrollTop(),
+            viewportBottom = viewportTop + $(window).height();
+        
+        (viewportBottom > elementTop) ? $('.form').addClass('inViewport') : $('.form').removeClass('inViewport');
+            
+            
+        
+    }
+    scrollEvent();
+    $(window).on('resize scroll', function () {
+        scrollEvent();
+    });
+});
+
+
+
+
+
+function isInViewport() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    var isIn = elementBottom > viewportTop && elementTop < viewportBottom;
+
+    if (isIn) {
+        this.addClass('inViewport');
+    } // else {
+    //   this.removeClass('inViewport');
+    // }
+
+
+    return isIn;
+};
+
+
+// $(document).ready(function () {
+//     var checkInViewportElements = document.querySelectorAll('.checkInViewport');
+//         checkInViewportElements.forEach(function (el) {
+//             $(el).isInViewport();
+//         });
+// });
+// $(window).on('resize scroll', function () {
+//     checkInViewportElements.forEach(function (el) {
+//         $(el).isInViewport();
+//     });
+// });
+
+
+
+
+
+
+
+
 
 /*fixed header*/
 $(window).scroll(function () {
+
     if ($(window).scrollTop() >= 1) {
         $('.header').addClass('fixed');
     }
@@ -157,7 +200,7 @@ $('.header__tel-btn').click(function () {
 
 /*counters*/
 function scrollEvent() {
-    if($('.help__body').length){
+    if ($('.help__body').length) {
         var hT = $('.help__body').offset().top,
             hH = $('.help__body').outerHeight(),
             wH = $(window).height(),
@@ -182,7 +225,7 @@ window.addEventListener("scroll", scrollEvent);
 /*end counters*/
 
 /*animation on scroll*/
-if($('.wow').length){
+if ($('.wow').length) {
     new WOW().init();
 }
 /*end animation on scroll*/
