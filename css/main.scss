@@ -80,7 +80,7 @@ body {
     -moz-transform .9s cubic-bezier(.77, 0, .175, 1) .3s;
     -o-transition: -o-transform .9s cubic-bezier(.77, 0, .175, 1) .3s;
     transition: -webkit-transform .9s cubic-bezier(.77, 0, .175, 1) .3s;
-    transition: transform .9s cubic-bezier(.77, 0, .175, 1) .3s;
+    transition: transform .9s cubic-bezier(.77, 0, .175, 1) .3s, background-color .2s ease-in-out;
     transition: transform .9s cubic-bezier(.77, 0, .175, 1) .3s,
     -webkit-transform .9s cubic-bezier(.77, 0, .175, 1) .3s,
     -moz-transform .9s cubic-bezier(.77, 0, .175, 1) .3s,
@@ -104,6 +104,7 @@ body {
     border: 1px solid var(--blue);
     border-radius: 0px;
     backface-visibility: hidden;
+    transition: var(--transition);
 }
 .btn__top {
     position: absolute;
@@ -271,8 +272,9 @@ body {
     }
     &_invert{
         background-color: var(--blue);
+        border: 0;
         &:before{
-            border-color: transparent;
+            border-color: var(--blue);
         }
         &:after{
             background-color: #fff;
@@ -368,89 +370,20 @@ blockquote {
 
 .intro {}
 
-.products {
-    &__list {
-        display: grid;
-        grid-template: auto / repeat(4, 1fr);
-        gap: 24px;
-    }
+
+
+.form-block {
+    &__desc {}
+    &__form {}
 }
-
-.product {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--bordercolor);
-
-    &__link {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__name {
-        display: flex;
-        align-items: center;
-        padding: 0 26px;
-        height: 80px;
-        border-bottom: 1px solid var(--bordercolor);
-
-        &-inner {
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 135%;
-            -webkit-line-clamp: 2;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
+.form {
+    &__field {
+        &.error {
+            .form__error{
+                
+            }
         }
     }
-
-    &__pic-wrap {
-        height: 270px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom: 1px solid var(--bordercolor);
-    }
-
-    &__pic {
-        max-width: 90%;
-        max-height: 90%;
-    }
-
-    &__desc {
-        padding: 24px;
-        display: flex;
-        gap: 30px;
-    }
-
-    &__desc-about {
-        font-size: 14px;
-        line-height: 158%;
-        text-transform: uppercase;
-        opacity: .5;
-        white-space: nowrap;
-    }
-
-    &__desc-text {
-        height: 88px;
-        overflow: hidden;
-        font-size: 14px;
-        display: block;
-    }
-
-    .btn{
-        margin: 0 -1px -1px -1px;
-    }
-}
-
-.form-block {}
-
-.formwrap {
-    &__desc {}
-}
-
-.form {
-    &__field {}
 
     &__input {}
 
@@ -461,7 +394,7 @@ blockquote {
     &__agree {}
 }
 
-.error {}
+
 
 
 
