@@ -25,13 +25,16 @@ button{
 }
 
 h1,
-h2,
+h2{
+    margin: 0 0 24px;
+    font-weight: 700;
+}
 h3,
 h4,
 h5,
-h6 {
-    margin: 0 0 50px;
-    font-weight: 500;
+h6{
+    margin: 0 0 24px;
+    font-weight: 600;
 }
 h1{
     font-size: 60px;
@@ -47,6 +50,9 @@ h3{
     line-height: 120%;
     letter-spacing: 0.03em;
     margin-bottom: 20px;
+}
+h4{
+    font-size: 16px;
 }
 
 input,

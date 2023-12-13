@@ -151,17 +151,104 @@ body {
 .formwrap {
     &__desc {}
 }
+
 .footer {
-    &__logo {}
+    position: relative;
+    a{
+        transition: var(--transition);
+        &:hover{
+            color: var(--red);
+        }
+    }
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 200%;
+        height: 1px;
+        background: var(--bordercolor);
+        top: 0;
+        left: 0;
+    }
+    &__contaner{
+        width: 100%;
+        max-width: 1864px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template: auto auto / 286px 4fr 2.5fr 2.5fr;
+    }
+    &-block{
+        padding: 40px 0;
+        position: relative;
+    }
+    &__logo {
+        grid-area: 1/1/3/2;
+        display: flex;
+        justify-content: center;
+        border-right: 1px solid var(--bordercolor);
+    }
     &__body {}
-    &__about {}
-    &__catalog {}
-    &__title {}
-    &__list {}
-    &__menu {}
-    &__contact {}
-    &__address {}
-    &__copy {}
+    &__about {
+        padding-left: 70px;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: var(--bordercolor);
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &__catalog {
+        padding-left: 70px;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: var(--bordercolor);
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &__menu {
+        padding-left: 70px;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 150%;
+            height: 1px;
+            background: var(--bordercolor);
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &__contact {
+        padding-left: 70px;
+    }
+    &__address {
+        padding-left: 70px;
+    }
+    &__copy {
+        padding-left: 70px;
+    }
+    &__title {
+        margin-bottom: 16px;
+        text-transform: uppercase;
+    }
+    &__list {
+        li{
+            a{
+                display: flex;
+                padding: 4px 0;
+            }
+        }
+    }
 }
 
 
