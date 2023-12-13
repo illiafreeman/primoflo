@@ -71,10 +71,8 @@ textarea {
 }
 
 p {
-  margin: 0 0 20px;
+  margin: 0 0 16px;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 150%;
 }
 p:last-child {
   margin: 0;
@@ -114,7 +112,7 @@ ol {
 
 b,
 strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 i {
@@ -136,6 +134,13 @@ table th,
 table td {
   border: 0;
   padding: 0;
+}
+
+* *:last-child {
+  margin-bottom: 0;
+}
+*:last-child {
+  margin-bottom: 0;
 }
 
 :root {
@@ -293,11 +298,53 @@ body {
 .footer__contact {
   padding-left: 70px;
 }
+.footer__contact p {
+  margin-bottom: 8px;
+}
+.footer__contact a {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  display: inline-block;
+  margin-bottom: 36px;
+}
+.footer__contact a:last-child {
+  margin-bottom: 0;
+}
 .footer__address {
   padding-left: 70px;
 }
+.footer__address div {
+  margin-bottom: 24px;
+}
+.footer__address div p {
+  margin-bottom: 24px;
+}
+.footer__address div p:last-child {
+  margin-bottom: 0;
+}
+.footer__address div:last-child {
+  margin-bottom: 0;
+}
 .footer__copy {
   padding-left: 70px;
+  color: #000;
+  opacity: 0.4;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__copy strong {
+  font-weight: 600;
+}
+.footer__copy p {
+  display: flex;
+  align-items: center;
+}
+.footer__copy p a {
+  display: inline-block;
+  margin-left: 10px;
 }
 .footer__title {
   margin-bottom: 16px;

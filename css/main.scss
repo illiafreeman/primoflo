@@ -230,12 +230,55 @@ body {
     }
     &__contact {
         padding-left: 70px;
+        p{
+            margin-bottom: 8px;
+        }
+        a{
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 120%;
+            display: inline-block;
+            margin-bottom: 36px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
     }
     &__address {
         padding-left: 70px;
+        div{
+            margin-bottom: 24px;
+            p{
+                margin-bottom: 24px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        
     }
     &__copy {
         padding-left: 70px;
+        color: #000;
+        opacity: .4;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        strong{
+            font-weight: 600;
+        }
+        p{
+            display: flex;
+            align-items: center;
+            a{
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
     }
     &__title {
         margin-bottom: 16px;
