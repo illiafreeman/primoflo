@@ -147,7 +147,7 @@ table td {
   --font3: "Source Sans Pro", sans-serif;
   --transition: all 0.2s ease-in-out;
   --transition05: all 0.5s ease-in-out;
-  --transitionbtn: all 0.8s cubic-bezier(.4,0,.2,1);
+  --transitionbtn: all 0.8s cubic-bezier(.4, 0, .2, 1);
   --black: #0c0c0d;
   --blue: #00265e;
   --gray: #efefef;
@@ -200,36 +200,81 @@ body {
   left: 0;
 }
 
+/* .btn {
+    height: 58px;
+    padding: 0 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    //background: var(--blue);
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--blue);
+        transition: var(--transition);
+    }
+    &__text {
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.03em;
+        color: #fff;
+        position: relative;
+        z-index: 100;
+        transition: var(--transition);
+        opacity: 0;
+        &_top{
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            padding: 0 40px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &:hover{
+        border: 1px solid var(--blue);
+        .btn__text{
+            color: var(--blue);
+        }
+        .btn__text_top{
+            color: var(--blue);
+            top: 0;
+        }
+        &:after{
+            top: -100%;
+        }
+    }
+} */
 .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 58px;
-  padding: 0 40px;
   position: relative;
-}
-.btn__top {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
-.btn {
-  position: relative;
-  display: flex;
+  display: inline-flex;
   overflow: hidden;
-  width: 269px;
-  height: 63px;
-  padding-right: 26px;
-  padding-left: 24px;
+  height: 58px;
+  padding-right: 40px;
+  padding-left: 40px;
   cursor: pointer;
   transition: 0.2s;
-  border-radius: 4px;
-  align-items: center;
+  border-radius: 0;
   justify-content: space-between;
+}
+.btn__invis {
+  opacity: 0;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.03em;
 }
 
 .btn:after {
@@ -241,7 +286,7 @@ body {
   content: "";
   transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
   transform: translateY(0%);
-  background-color: #025ea1;
+  background-color: var(--blue);
   backface-visibility: hidden;
 }
 
@@ -253,8 +298,8 @@ body {
   width: 100%;
   height: 100%;
   content: "";
-  border: 1px solid #025ea1;
-  border-radius: 4px;
+  border: 1px solid var(--blue);
+  border-radius: 0px;
   backface-visibility: hidden;
 }
 
@@ -267,8 +312,8 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  padding-right: 26px;
-  padding-left: 24px;
+  padding-right: 40px;
+  padding-left: 40px;
   transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
   transform: translateY(0%);
   background-color: transparent;
@@ -286,8 +331,8 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  padding-right: 26px;
-  padding-left: 24px;
+  padding-right: 40px;
+  padding-left: 40px;
   transition: transform 0.3s;
   transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1), background-color 0.9s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
   transform: translateY(100%);
@@ -297,11 +342,7 @@ body {
 }
 
 .btn__bottom .btn__text {
-  color: #025ea1;
-}
-
-.btn__bottom .btn__icon path {
-  stroke: #025ea1;
+  color: var(--blue);
 }
 
 .btn:hover:after {
@@ -319,6 +360,14 @@ body {
 .btn:hover .btn__bottom {
   transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1) 0.2s, background-color 0.9s cubic-bezier(0.77, 0, 0.175, 1) 0s;
   transform: translateY(0);
+}
+
+.btn__text {
+  transition: 0.2s;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.03em;
 }
 
 .grid {
