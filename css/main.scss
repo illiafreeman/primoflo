@@ -46,6 +46,9 @@ body {
 .article {
     padding: 120px 0;
     position: relative;
+    &_gray{
+        background: var(--gray);
+    }
     &:after {
         content: "";
         display: block;
@@ -111,23 +114,7 @@ blockquote {
 .intro {
 }
 
-.about {
-    &__link{
-        text-decoration: underline;
-        font-size: 14px;
-        letter-spacing: 0.03em;
-        display: inline-block;
-        margin-top: 16px;
-        &:hover{
-            text-decoration: none;
-        }
-    }
-    .parallax{
-        height: 640px;
-    }
-}
-.contaner {
-}
+
 
 .form {
     &__field {}
@@ -140,17 +127,8 @@ blockquote {
 }
 
 
-.why {
-    &__list {}
-    &__item {}
-}
-.category {
-    &__list {}
-    &__item {}
-    &__link {}
-    &__name {}
-    &__pic {}
-}
+
+
 .sphere {
     &__desc {}
     &__list {}

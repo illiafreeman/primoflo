@@ -1,0 +1,27 @@
+.why__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.why__list {
+  display: flex;
+  gap: 65px;
+}
+.why__list_end {
+  justify-content: flex-end;
+}
+.why__item {
+  width: 400px;
+  padding: 32px 32px 80px;
+  background: #fff;
+  position: relative;
+  border: 1px solid var(--bordercolor);
+}
+.why__item p {
+  margin-bottom: 0;
+}
+.why__item img {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}/*# sourceMappingURL=why.css.map */

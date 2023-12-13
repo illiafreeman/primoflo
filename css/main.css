@@ -186,6 +186,9 @@ body {
   padding: 120px 0;
   position: relative;
 }
+.article_gray {
+  background: var(--gray);
+}
 .article:after {
   content: "";
   display: block;
@@ -237,20 +240,6 @@ blockquote {
   margin: 0 0 24px;
   font-size: inherit;
   border-left: 4px solid var(--red);
-}
-
-.about__link {
-  text-decoration: underline;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  display: inline-block;
-  margin-top: 16px;
-}
-.about__link:hover {
-  text-decoration: none;
-}
-.about .parallax {
-  height: 640px;
 }
 
 @media only screen and (max-width: 1700px) {
