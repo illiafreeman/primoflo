@@ -134,7 +134,7 @@ body {
     cursor: pointer;
     transition: .2s;
     border-radius: 0;
-    justify-content: space-between;
+    justify-content: center;
 
     &__invis {
         opacity: 0;
@@ -186,45 +186,17 @@ body {
     z-index: 2;
     top: 0;
     left: 0;
-    display: inline-block;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     height: 100%;
     padding-right: 40px;
     padding-left: 40px;
-    -webkit-transition: -webkit-transform .9s cubic-bezier(.77, 0, .175, 1) .3s;
-    -moz-transition: transform .9s cubic-bezier(.77, 0, .175, 1) .3s,
-    -moz-transform .9s cubic-bezier(.77, 0, .175, 1) .3s;
-    -o-transition: -o-transform .9s cubic-bezier(.77, 0, .175, 1) .3s;
-    transition: -webkit-transform .9s cubic-bezier(.77, 0, .175, 1) .3s;
     transition: transform .9s cubic-bezier(.77, 0, .175, 1) .3s;
-    transition: transform .9s cubic-bezier(.77, 0, .175, 1) .3s,
-    -webkit-transform .9s cubic-bezier(.77, 0, .175, 1) .3s,
-    -moz-transform .9s cubic-bezier(.77, 0, .175, 1) .3s,
-    -o-transform .9s cubic-bezier(.77, 0, .175, 1) .3s;
-    -webkit-transform: translateY(0%);
-    -moz-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    -o-transform: translateY(0%);
     transform: translateY(0%);
     background-color: transparent;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -moz-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: center;
 }
 .btn__bottom {
     position: absolute;
@@ -271,7 +243,7 @@ body {
     -webkit-justify-content: space-between;
     -moz-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: center;
 }
 .btn__bottom .btn__text {
     color: var(--blue);
