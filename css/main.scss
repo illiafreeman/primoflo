@@ -112,69 +112,7 @@ blockquote {
 }
 .intro {
 }
-.sphere {
-    &__desc {
-        padding-right: 70px;
-    }
-    &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-    }
-    &__item {}
-    &__link {
-        display: flex;
-        background: #f3f3f3;
-        padding: 40px 76px 40px 80px;
-        gap: 70px;
-        justify-content: space-between;
-        position: relative;
-        transition: var(--transition);
-        &:hover{
-            box-shadow: 0 -9px 0 0 var(--red) inset;
-            .sphere__item-arrow{
-                stroke: var(--red);
-                transform: rotate(-45deg)
-            }
-        }
-    }
-    &__item-pic {
-        width: 160px;
-        min-width: 160px;
-    }
-    &__item-img {
-        width: 100%;
-    }
-    &__item-num {
-        font-family: var(--third-family);
-        font-weight: 400;
-        font-size: 46px;
-        display: block;
-        line-height: 1;
-        color: var(--red);
-        position: absolute;
-        left: 40px;
-        bottom: 40px;
-    }
-    &__item-desc {}
-    &__item-name {
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 135%;
-        display: block;
-        margin-bottom: 8px;
-    }
-    &__item-about {}
-    &__item-arrow {
-        position: absolute;
-        width: 26px;
-        height: 24px;
-        right: 40px;
-        bottom: 40px;
-        stroke: var(--blue);
-        transition: var(--transition);
-    }
-}
+
 .products {
     &__list {}
 }
