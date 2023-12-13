@@ -110,15 +110,55 @@ blockquote {
     font-size: inherit;
     border-left: 4px solid var(--red);
 }
+.title-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a{
+        font-size: 16px;
+        line-height: 158%;
+        text-transform: uppercase;
+        font-weight: 400;
+        text-decoration: underline;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
 .intro {
 }
 
 .products {
-    &__list {}
+    &__list {
+        display: grid;
+        grid-template: auto / repeat(4, 1fr);
+        gap: 0;
+    }
 }
 .product {
-    &__link {}
-    &__name {}
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--bordercolor);
+    &__link {
+        display: flex;
+        flex-direction: column;
+    }
+    &__name {
+        display: flex;
+        align-items: center;
+        padding: 0 26px;
+        height: 80px;
+        border-bottom: 1px solid var(--bordercolor);
+        &-inner{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 135%;
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
     &__pic-wrap {}
     &__pic {}
     &__desc {}

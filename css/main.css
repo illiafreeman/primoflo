@@ -242,6 +242,53 @@ blockquote {
   border-left: 4px solid var(--red);
 }
 
+.title-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-link a {
+  font-size: 16px;
+  line-height: 158%;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.title-link a:hover {
+  text-decoration: none;
+}
+
+.products__list {
+  display: grid;
+  grid-template: auto/repeat(4, 1fr);
+  gap: 0;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--bordercolor);
+}
+.product__link {
+  display: flex;
+  flex-direction: column;
+}
+.product__name {
+  display: flex;
+  align-items: center;
+  padding: 0 26px;
+  height: 80px;
+  border-bottom: 1px solid var(--bordercolor);
+}
+.product__name-inner {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 135%;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 @media only screen and (max-width: 1700px) {
   .contaner {
     width: 100%;
