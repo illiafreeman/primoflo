@@ -7,7 +7,6 @@
   z-index: 100;
   background: var(--gray);
   z-index: 1000;
-  position: relative;
 }
 .header:after {
   content: "";

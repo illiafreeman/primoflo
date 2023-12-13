@@ -97,22 +97,22 @@ if ($('[data-fancybox]').length) {
 
 /*isInViewport*/
 $.fn.isInViewport = function () {
-var elementTop = $(this).offset().top,
-    elementBottom = elementTop + $(this).outerHeight(),
-    viewportTop = $(window).scrollTop(),
-    viewportBottom = viewportTop + $(window).height();
+    var elementTop = $(this).offset().top,
+        elementBottom = elementTop + $(this).outerHeight(),
+        viewportTop = $(window).scrollTop(),
+        viewportBottom = viewportTop + $(window).height();
     (viewportBottom > elementTop) ? $(this).addClass('inViewport') : $(this).removeClass('inViewport');
-    if(viewportBottom > elementTop){
+    if (viewportBottom > elementTop) {
         //console.log('0');
-    }else{
+    } else {
         //console.log(elementTop - viewportBottom);
     }
 }
 
 const checkInViewportElements = document.querySelectorAll('.checkInViewport');
-    checkInViewportElements.forEach(function (el) {
-        $(el).isInViewport();
-    });
+checkInViewportElements.forEach(function (el) {
+    $(el).isInViewport();
+});
 $(window).on('resize scroll', function () {
     checkInViewportElements.forEach(function (el) {
         $(el).isInViewport();
@@ -194,8 +194,16 @@ if ($('.wow').length) {
 }
 /*end animation on scroll*/
 
-
-
+/*horisontal parallax*/
+$(window).on("load resize scroll", function () {
+    $(".parallax").each(function () {
+        var windowTop = $(window).scrollTop();
+        var elementTop = $(this).offset().top;
+        var leftPosition = (windowTop - elementTop) / 10;
+        $(this).find(".parallax__inner").css({ left: -leftPosition - 120 });
+    });
+});
+/*end horisontal parallax*/
 
 
 
