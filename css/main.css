@@ -178,7 +178,7 @@ body {
 
 .contaner {
   width: 100%;
-  max-width: 1484px;
+  max-width: 1564px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -240,6 +240,65 @@ blockquote {
   margin: 0 0 24px;
   font-size: inherit;
   border-left: 4px solid var(--red);
+}
+
+.sphere__desc {
+  padding-right: 70px;
+}
+.sphere__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.sphere__link {
+  display: flex;
+  background: #f3f3f3;
+  padding: 40px 76px 40px 80px;
+  gap: 70px;
+  justify-content: space-between;
+  position: relative;
+  transition: var(--transition);
+}
+.sphere__link:hover {
+  box-shadow: 0 -9px 0 0 var(--red) inset;
+}
+.sphere__link:hover .sphere__item-arrow {
+  stroke: var(--red);
+  transform: rotate(-45deg);
+}
+.sphere__item-pic {
+  width: 160px;
+  min-width: 160px;
+}
+.sphere__item-img {
+  width: 100%;
+}
+.sphere__item-num {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 46px;
+  display: block;
+  line-height: 1;
+  color: var(--red);
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+}
+.sphere__item-name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 135%;
+  display: block;
+  margin-bottom: 8px;
+}
+.sphere__item-arrow {
+  position: absolute;
+  width: 26px;
+  height: 24px;
+  right: 40px;
+  bottom: 40px;
+  stroke: var(--blue);
+  transition: var(--transition);
 }
 
 @media only screen and (max-width: 1700px) {
