@@ -62,21 +62,15 @@ body {
     &__text {}
     &__bottom {}
 }
-
 .grid{
     display: grid;
     gap: 24px;
     grid-template: 1fr / 1fr 1fr;
-    &_card{
-        gap: 50px;
-        margin-bottom: 20px;
-        &:last-child{
-            margin-bottom: 0;
-        }
-    }
     &__col{
-        
         &_desc{
+            h2{
+                margin-bottom: 24px;
+            }
             position: relative;
             &-title{
                 padding-bottom: 180px;
@@ -86,6 +80,9 @@ body {
                     left: 50px;
                 }
             }
+        }
+        &_pic{
+
         }
     }
 }
@@ -104,11 +101,30 @@ body {
         left: 0;
     }
 }
+blockquote {
+    padding: 0 30px;
+    margin: 0 0 24px;
+    font-size: inherit;
+    border-left: 4px solid var(--red);
+}
 
 .intro {
 }
 
 .about {
+    &__link{
+        text-decoration: underline;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        display: inline-block;
+        margin-top: 16px;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    .parallax{
+        height: 640px;
+    }
 }
 .contaner {
 }
