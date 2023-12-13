@@ -373,25 +373,69 @@ blockquote {
 
 
 .form-block {
-    &__desc {}
+    background: var(--gray) url(../img/form.png) no-repeat -122px -246px/auto 971px;
+    &__desc {
+        padding-left: 160px;
+    }
     &__form {}
+    .contaner{
+        display: grid;
+        grid-template: auto / auto 600px;
+        gap: 24px;
+    }
 }
 .form {
     &__field {
+        margin-bottom: 24px;
         &.error {
+            position: relative;
             .form__error{
-                
+                display: block;
+                color: rgba(201, 38, 40, .5);
+            }
+            .form__input{
+                border-color: rgba(201, 38, 40, .5);
+                &::placeholder{
+                    color: rgba(201, 38, 40, .5);
+                }
+            }
+            &:after{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 21px;
+                height: 20px;
+                background: url(../img/Icon_error.svg) no-repeat center center / contain;
+                top: 17px;
+                right: 22px;
             }
         }
     }
-
-    &__input {}
-
-    &__error {}
-
-    &__btn {}
-
-    &__agree {}
+    &__input {
+        font-size: 16px;
+        line-height: 120%;
+        height: 56px;
+        background: #fff;
+        padding: 0 60px 0 40px;
+        width: 100%;
+        border: 1px solid transparent;
+        &::placeholder{
+            opacity: 1;
+        }
+    }
+    &__error {
+        display: none;
+    }
+    .btn {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    &__agree {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 153%;
+        opacity: 0.4;
+    }
 }
 
 
