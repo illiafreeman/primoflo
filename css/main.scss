@@ -270,30 +270,21 @@ body {
         letter-spacing: 0.03em;
     }
     &_invert{
+        background-color: var(--blue);
         &:before{
-
+            border-color: transparent;
         }
         &:after{
-            transform: translateY(101%);
+            background-color: #fff;
         }
         .btn__top{
-
+            .btn__text {
+                color: var(--blue);
+            }
         }
         .btn__bottom{
-            transform: translateY(0);
-        }
-        &:hover{
-            &:before{
-
-            }
-            &:after{
-                
-            }
-            .btn__top{
-    
-            }
-            .btn__bottom{
-    
+            .btn__text {
+                color: #fff;
             }
         }
     }
@@ -381,6 +372,7 @@ blockquote {
     &__list {
         display: grid;
         grid-template: auto / repeat(4, 1fr);
+        gap: 24px;
     }
 }
 
@@ -446,8 +438,8 @@ blockquote {
         display: block;
     }
 
-    &__order {
-        
+    .btn{
+        margin: 0 -1px -1px -1px;
     }
 }
 

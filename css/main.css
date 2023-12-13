@@ -310,12 +310,22 @@ body {
   font-size: 18px;
   letter-spacing: 0.03em;
 }
+.btn_invert {
+  background-color: var(--blue);
+}
+.btn_invert:before {
+  border-color: transparent;
+}
 .btn_invert:after {
-  transform: translateY(101%);
+  background-color: #fff;
 }
-.btn_invert .btn__bottom {
-  transform: translateY(0);
+.btn_invert .btn__top .btn__text {
+  color: var(--blue);
 }
+.btn_invert .btn__bottom .btn__text {
+  color: #fff;
+}
+
 .grid {
   display: grid;
   gap: 24px;
@@ -377,6 +387,7 @@ blockquote {
 .products__list {
   display: grid;
   grid-template: auto/repeat(4, 1fr);
+  gap: 24px;
 }
 
 .product {
@@ -432,4 +443,7 @@ blockquote {
   overflow: hidden;
   font-size: 14px;
   display: block;
+}
+.product .btn {
+  margin: 0 -1px -1px -1px;
 }/*# sourceMappingURL=main.css.map */
