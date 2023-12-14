@@ -429,4 +429,15 @@ blockquote {
   top: 12px;
   stroke-width: 2;
   transform: rotate(90deg);
+}
+
+.breadcrumbs li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 29px;
+  height: 29px;
+  background: url(../img/icon_st.svg) no-repeat center center/contain;
+  top: 3px;
+  left: 5px;
 }/*# sourceMappingURL=main.css.map */

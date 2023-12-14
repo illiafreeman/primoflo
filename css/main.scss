@@ -412,7 +412,25 @@ blockquote {
         }
     }
 }
-
+.breadcrumbs{
+    li{
+        a{
+            &:after{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 29px;
+                height: 29px;
+                background: url(../img/icon_st.svg) no-repeat center center / contain;
+                top: 3px;
+                left: 5px;
+            }
+            &:hover{
+                
+            }
+        }
+    }
+}
 
 
 
