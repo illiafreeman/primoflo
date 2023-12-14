@@ -386,6 +386,10 @@ blockquote {
   text-decoration: none;
 }
 
+.intro {
+  background: var(--gray) url(../img/intro.png) no-repeat 160% -200px/auto 971px;
+}
+
 .form-block {
   background: var(--gray) url(../img/form.png) no-repeat -122px -246px/auto 971px;
 }

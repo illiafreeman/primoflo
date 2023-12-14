@@ -368,7 +368,9 @@ blockquote {
     }
 }
 
-.intro {}
+.intro {
+    background: var(--gray) url(../img/intro.png) no-repeat 160% -200px/auto 971px;
+}
 
 
 
