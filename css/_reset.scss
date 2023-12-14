@@ -132,10 +132,10 @@ table td {
 *{
     *{
         &:last-child{
-            margin-bottom: 0;
+            margin-bottom: 0 !important;
         }
     }
     &:last-child{
-        margin-bottom: 0;
+        margin-bottom: 0 !important;
     }
 }
