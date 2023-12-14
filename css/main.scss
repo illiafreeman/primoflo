@@ -557,7 +557,6 @@ blockquote {
         }
     }
 }
-
 .list {
     li{
         line-height: 120%;
@@ -575,19 +574,31 @@ blockquote {
         }
     }
 }
-.article_spheres{
+
+
+
+
+
+
+
+
+
+.article_spheres-intro{
     height: 416px;
     h2{
         max-width: 450px;
     }
+    .spheres-bg{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        z-index: 1;
+        clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
+    }
 }
-.spheres-bg{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    z-index: 1;
-    clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
+.article_spheres{
+
 }
 
 

@@ -591,14 +591,13 @@ blockquote {
   background: url(../img/icon_disc.svg) no-repeat left 6px;
 }
 
-.article_spheres {
+.article_spheres-intro {
   height: 416px;
 }
-.article_spheres h2 {
+.article_spheres-intro h2 {
   max-width: 450px;
 }
-
-.spheres-bg {
+.article_spheres-intro .spheres-bg {
   position: absolute;
   top: 0;
   bottom: 0;
