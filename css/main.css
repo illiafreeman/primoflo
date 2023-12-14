@@ -204,6 +204,8 @@ body {
 }
 .article_title h2, .article_title h3 {
   margin-bottom: 24px;
+  position: relative;
+  z-index: 10;
 }
 .article_catalog {
   padding: 40px 0 0;
@@ -485,11 +487,15 @@ blockquote {
   flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 40px;
+  position: relative;
+  z-index: 10;
+}
+.breadcrumbs li {
+  font-size: 14px;
 }
 .breadcrumbs li a {
   color: #9d9d9d;
   transition: var(--transition);
-  font-size: 14px;
 }
 .breadcrumbs li a:after {
   content: "/";
@@ -583,4 +589,21 @@ blockquote {
 }
 .list_disc li {
   background: url(../img/icon_disc.svg) no-repeat left 6px;
+}
+
+.article_spheres {
+  height: 416px;
+}
+.article_spheres h2 {
+  max-width: 450px;
+}
+
+.spheres-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 1;
+  -webkit-clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
 }/*# sourceMappingURL=main.css.map */

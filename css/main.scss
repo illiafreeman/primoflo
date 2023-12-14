@@ -66,6 +66,8 @@ body {
         padding: 40px 0 80px;
         h2, h3{
             margin-bottom: 24px;
+            position: relative;
+            z-index: 10;
         }
     }
     &_catalog{
@@ -80,6 +82,7 @@ body {
     &_nop{
         padding: 0;
     }
+    
 }
 
 
@@ -463,11 +466,13 @@ blockquote {
     flex-wrap: wrap;
     gap: 16px;
     margin-bottom: 40px;
+    position: relative;
+    z-index: 10;
     li{
+        font-size: 14px;
         a{
             color: #9d9d9d;
             transition: var(--transition);
-            font-size: 14px;
             &:after{
                 content: '/';
                 margin-left: 16px;
@@ -570,8 +575,20 @@ blockquote {
         }
     }
 }
-
-
+.article_spheres{
+    height: 416px;
+    h2{
+        max-width: 450px;
+    }
+}
+.spheres-bg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    z-index: 1;
+    clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
+}
 
 
 
