@@ -1,0 +1,86 @@
+.prod {
+    display: grid;
+    grid-template: auto auto auto / 2fr 1fr auto;
+    gap: 24px;
+    margin-bottom: 42px;
+    &__head{
+        grid-area: 1/1/2/2;
+    }
+    &__desc {
+        grid-area: 2/1/3/2;
+        table{
+            
+            tr{
+                &:first-child{
+                    td{
+                        border-top: 1px solid var(--bordercolor);
+                    }    
+                }
+                td{
+                    width: 50%;
+                    border-bottom: 1px solid var(--bordercolor);
+                    padding: 24px 24px 24px 0;
+                    vertical-align: top;
+                    p{
+                        margin: 0;
+                    }
+                    &:first-child{
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        opacity: .7;
+                        color: #4f4f50;
+                    }
+                }
+            }
+        }
+    }
+    &__pic {
+        grid-area: 1/2/3/3;
+    }
+    &__action {
+        grid-area: 3/1/4/2;
+    }
+    &__doc {
+        grid-area: 1/3/2/4;
+        
+    }
+    &__file{
+        display: flex;
+        align-items: center;
+        .prod__file-pic{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #fff;
+            border: 1px solid var(--bordercolor);
+            transition: var(--transition);
+            margin-right: 15px;
+            svg{
+                width: 24px;
+                height: 24px;
+                stroke: var(--blue);
+                fill: transparent;
+                transition: var(--transition);
+            }
+        }
+        .prod__file-text{
+            text-decoration: underline;
+            transition: var(--transition);
+        }
+        &:hover{
+            .prod__file-pic{
+                border: 1px solid var(--red);
+                svg{
+                    stroke: var(--red);
+                }
+            }
+            .prod__file-text{
+                text-decoration: none;
+                color: var(--red);
+            }
+        }
+    }
+}
