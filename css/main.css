@@ -604,5 +604,5 @@ blockquote {
   left: 50%;
   z-index: 1;
   -webkit-clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
 }/*# sourceMappingURL=main.css.map */

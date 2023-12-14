@@ -594,12 +594,22 @@ blockquote {
         bottom: 0;
         left: 50%;
         z-index: 1;
+        -webkit-clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
         clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
     }
 }
-.article_spheres{
 
+.spheres {
+    &__list {}
+    &__item {}
+    &__link {}
+    &__link-front {}
+    &__link-body {}
+    &__link-name {}
+    &__link-arr {}
+    &__link-back {}
 }
+
 
 
 
