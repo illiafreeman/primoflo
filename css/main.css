@@ -189,6 +189,9 @@ body {
 .article_gray {
   background: var(--gray);
 }
+.article_title {
+  padding: 40px 0 64px;
+}
 .article:after {
   content: "";
   display: block;
@@ -431,13 +434,52 @@ blockquote {
   transform: rotate(90deg);
 }
 
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.breadcrumbs li a {
+  color: #9d9d9d;
+  transition: var(--transition);
+}
 .breadcrumbs li a:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 29px;
-  height: 29px;
-  background: url(../img/icon_st.svg) no-repeat center center/contain;
-  top: 3px;
-  left: 5px;
+  content: "/";
+  margin-left: 16px;
+  color: var(--red);
+}
+.breadcrumbs li a:hover {
+  color: var(--black);
+}
+
+.filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.filter__list_sub .filter__item {
+  height: 30px;
+  border: 1px solid transparent;
+}
+.filter__list_sub .filter__item:hover, .filter__list_sub .filter__item.act {
+  border: 1px solid var(--bordercolor);
+  background: var(--gray);
+}
+.filter__item {
+  cursor: pointer;
+  height: 34px;
+  padding: 0 16px;
+  border-radius: 17px;
+  border: 1px solid var(--bordercolor);
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter__item:hover, .filter__item.act {
+  border: 1px solid var(--red);
 }/*# sourceMappingURL=main.css.map */

@@ -53,7 +53,9 @@ body {
     &_gray {
         background: var(--gray);
     }
-
+    &_title{
+        padding: 40px 0 64px;
+    }
     &:after {
         content: "";
         display: block;
@@ -413,25 +415,60 @@ blockquote {
     }
 }
 .breadcrumbs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
     li{
         a{
+            color: #9d9d9d;
+            transition: var(--transition);
             &:after{
-                content: '';
-                display: block;
-                position: absolute;
-                width: 29px;
-                height: 29px;
-                background: url(../img/icon_st.svg) no-repeat center center / contain;
-                top: 3px;
-                left: 5px;
+                content: '/';
+                margin-left: 16px;
+                color: var(--red);
             }
             &:hover{
-                
+                color: var(--black);
             }
         }
     }
 }
-
+.filter{
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 24px;
+        &_sub{
+            .filter__item{
+                height: 30px;
+                border: 1px solid transparent;
+                &:hover, &.act{
+                    border: 1px solid var(--bordercolor);
+                    background: var(--gray);
+                }
+            }
+        }
+    }
+    &__item{
+        cursor: pointer;
+        height: 34px;
+        padding: 0 16px;
+        border-radius: 17px;
+        border: 1px solid var(--bordercolor);
+        font-size: 14px;
+        text-transform: uppercase;
+        transition: var(--transition);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover, &.act{
+            border: 1px solid var(--red);
+        }
+    }
+    
+}
 
 
 
