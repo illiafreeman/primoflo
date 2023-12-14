@@ -49,13 +49,6 @@ body {
 .article {
     padding: 120px 0;
     position: relative;
-
-    &_gray {
-        background: var(--gray);
-    }
-    &_title{
-        padding: 40px 0 64px;
-    }
     &:after {
         content: "";
         display: block;
@@ -65,6 +58,24 @@ body {
         background: var(--bordercolor);
         bottom: 0;
         left: 0;
+    }
+    &_gray {
+        background: var(--gray);
+    }
+    &_title{
+        padding: 40px 0 80px;
+        h2{
+            margin-bottom: 24px;
+        }
+    }
+    &_catalog{
+        padding: 40px 0 0;
+        .products__list{
+            margin-bottom: 40px;
+        }
+        &:after{
+            display: none;
+        }
     }
 }
 
@@ -423,6 +434,7 @@ blockquote {
         a{
             color: #9d9d9d;
             transition: var(--transition);
+            font-size: 14px;
             &:after{
                 content: '/';
                 margin-left: 16px;
@@ -435,6 +447,7 @@ blockquote {
     }
 }
 .filter{
+    margin-bottom: 36px;
     &__list{
         display: flex;
         flex-wrap: wrap;
@@ -449,6 +462,9 @@ blockquote {
                     background: var(--gray);
                 }
             }
+        }
+        &:last-child{
+            margin-bottom: 0;
         }
     }
     &__item{
@@ -468,6 +484,40 @@ blockquote {
         }
     }
     
+}
+.pag-wrap {
+    border-top: 1px solid var(--bordercolor);
+    .contaner{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+.pag {
+    display: flex;
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 68px;
+        height: 68px;
+        font-size: 18px;
+        letter-spacing: 0.03em;
+        transition: var(--transition);
+        svg{
+            fill: transparent;
+            stroke: var(--red);
+            width: 8px;
+            height: 15px;
+        }
+        &:hover, &.act{
+            background: var(--gray);
+        }
+    }
 }
 
 
