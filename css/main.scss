@@ -621,21 +621,38 @@ blockquote {
         display: flex;
         align-items: center;
         .prod__file-pic{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #fff;
+            border: 1px solid var(--bordercolor);
+            transition: var(--transition);
+            margin-right: 15px;
             svg{
-            
+                width: 24px;
+                height: 24px;
+                stroke: var(--blue);
+                fill: transparent;
+                transition: var(--transition);
             }
         }
         .prod__file-text{
-            
+            text-decoration: underline;
+            transition: var(--transition);
         }
         &:hover{
             .prod__file-pic{
+                border: 1px solid var(--red);
                 svg{
-                
+                    stroke: var(--red);
                 }
             }
             .prod__file-text{
-                
+                text-decoration: none;
+                color: var(--red);
             }
         }
     }
