@@ -50,7 +50,7 @@
   border: 1px solid var(--bordercolor);
 }
 .spheres__link-back .spheres__link-body {
-  max-height: 400px;
+  max-height: 354px;
   align-items: flex-start;
   overflow: auto;
   flex-direction: column;
