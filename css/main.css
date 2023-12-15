@@ -329,9 +329,9 @@ body {
 
 .contaner {
   width: 100%;
-  max-width: 1564px;
+  max-width: 1526px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
 }
 
 .article {
@@ -380,7 +380,6 @@ body {
 .article_head {
   padding: 40px 0;
 }
-
 .grid {
   display: grid;
   gap: 24px;

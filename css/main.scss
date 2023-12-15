@@ -39,9 +39,10 @@ body {
 }
 .contaner {
     width: 100%;
-    max-width: 1564px;
+    max-width: 1526px; //1524 + 48 = 1572 // 1526       10*131=1310 + 24*9 = 216 = 1526 + 48 = 1574 + 262 = 1836
     margin: 0 auto;
-    padding: 0 20px;
+    //padding: 0 24px; // 1524+232=1756
+    padding: 0; // 1524+232=1756
 }
 .article {
     padding: 120px 0;
@@ -88,6 +89,7 @@ body {
     &_head{
         padding: 40px 0;
     }
+    &_inner {}
 }
 .grid {
     display: grid;
@@ -356,6 +358,18 @@ blockquote {
     }
 }
 
+
+.news {
+    &__list {}
+    &__item {}
+    &__link {}
+    &__desc {}
+    &__date {}
+    &__title {}
+    &__text {}
+    &__arrow {}
+    &__pic {}
+}
 
 
 
