@@ -619,6 +619,11 @@ blockquote {
         position: relative;
         z-index: 1;
         background: var(--graylight);
+        padding: 40px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        border: 1px solid transparent;
     }
     &__link-back {
         z-index: 0;
@@ -626,6 +631,17 @@ blockquote {
         position: absolute;
         border: 1px solid #000;
         background: #fff;
+        padding: 40px;
+        padding-right: 140px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        border: 1px solid var(--bordercolor);
+        .spheres__link-body{
+            max-height: 200px;
+            align-items: flex-start;
+            overflow: auto;
+        }
     }
     &__link {
         display: flex;
@@ -633,7 +649,7 @@ blockquote {
         position: relative;
         overflow: hidden;
         height: 400px;
-        &:hover{
+        &:hover, &.act{
             .spheres__link-front{
                 z-index: 0;
                 transform: rotateY(180deg);
@@ -644,9 +660,37 @@ blockquote {
             }
         }
     }
-    &__link-body {}
-    &__link-name {}
-    &__link-arr {}
+    &__link-body {
+        flex: 1 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 242px;
+        }
+    }
+    &__link-name {
+        font-weight: 600;
+        font-size: 24px;
+    }
+    &__link-arr {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--red) url(../img/icon_arrow.svg) no-repeat center center;
+        transition: var(--transition);
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        cursor: pointer;
+        z-index: 10;
+        &:hover{
+            transform: scale(1.1)
+        }
+    }
 }
 
 

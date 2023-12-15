@@ -25,9 +25,11 @@
 .sphere__item-pic {
   width: 160px;
   min-width: 160px;
+  max-width: 160px;
 }
 .sphere__item-img {
   width: 100%;
+  opacity: 0.8;
 }
 .sphere__item-num {
   font-family: var(--third-family);
