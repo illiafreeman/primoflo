@@ -1,0 +1,110 @@
+.article_spheres-intro{
+    height: 416px;
+    h2{
+        max-width: 450px;
+    }
+    .spheres-bg{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        z-index: 1;
+        -webkit-clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+.spheres {
+    &__list {
+        display: grid;
+        gap: 24px;
+        grid-template: auto/1fr 1fr;
+    }
+    &__item {}
+    
+    &__link-front, &__link-back {
+        height: 100%;
+        width: 100%;
+        transform-style: preserve-3d;
+        transition: var(--transition05);
+    }
+    &__link-front{
+        background: #fff;
+        position: relative;
+        z-index: 1;
+        background: var(--graylight);
+        padding: 40px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        border: 1px solid transparent;
+    }
+    &__link-back {
+        z-index: 0;
+        transform: rotateY(-180deg);
+        position: absolute;
+        border: 1px solid #000;
+        background: #fff;
+        padding: 40px;
+        padding-right: 140px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        border: 1px solid var(--bordercolor);
+        .spheres__link-body{
+            max-height: 400px;
+            align-items: flex-start;
+            overflow: auto;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+    &__link {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        height: 558px;
+        &:hover, &.act{
+            .spheres__link-front{
+                z-index: 0;
+                transform: rotateY(180deg);
+            }
+            .spheres__link-back{
+                z-index: 1;
+                transform: rotateY(0deg);
+            }
+        }
+    }
+    &__link-body {
+        flex: 1 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 242px;
+        }
+    }
+    &__link-name {
+        font-weight: 600;
+        font-size: 24px;
+    }
+    &__link-arr {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--red) url(../../img/icon_arrow.svg) no-repeat center center;
+        transition: var(--transition);
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        cursor: pointer;
+        z-index: 10;
+        &:hover{
+            transform: scale(1.1)
+        }
+    }
+}
