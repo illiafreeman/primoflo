@@ -12,6 +12,7 @@
     --black: #0c0c0d;
     --blue: #00265e;
     --gray: #efefef;
+    --graylight: #f3f3f3;
     --red: #c92628;
     --bordercolor: #dcdcdc;
 }
@@ -600,14 +601,52 @@ blockquote {
 }
 
 .spheres {
-    &__list {}
+    &__list {
+        display: grid;
+        gap: 24px;
+        grid-template: auto/1fr 1fr;
+    }
     &__item {}
-    &__link {}
-    &__link-front {}
+    
+    &__link-front, &__link-back {
+        height: 100%;
+        width: 100%;
+        transform-style: preserve-3d;
+        transition: var(--transition05);
+    }
+    &__link-front{
+        background: #fff;
+        position: relative;
+        z-index: 1;
+        background: var(--graylight);
+    }
+    &__link-back {
+        z-index: 0;
+        transform: rotateY(-180deg);
+        position: absolute;
+        border: 1px solid #000;
+        background: #fff;
+    }
+    &__link {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        height: 400px;
+        &:hover{
+            .spheres__link-front{
+                z-index: 0;
+                transform: rotateY(180deg);
+            }
+            .spheres__link-back{
+                z-index: 1;
+                transform: rotateY(0deg);
+            }
+        }
+    }
     &__link-body {}
     &__link-name {}
     &__link-arr {}
-    &__link-back {}
 }
 
 

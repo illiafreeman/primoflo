@@ -151,6 +151,7 @@ table td {
   --black: #0c0c0d;
   --blue: #00265e;
   --gray: #efefef;
+  --graylight: #f3f3f3;
   --red: #c92628;
   --bordercolor: #dcdcdc;
 }
@@ -605,4 +606,44 @@ blockquote {
   z-index: 1;
   -webkit-clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
   clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.spheres__list {
+  display: grid;
+  gap: 24px;
+  grid-template: auto/1fr 1fr;
+}
+.spheres__link-front, .spheres__link-back {
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: var(--transition05);
+}
+.spheres__link-front {
+  background: #fff;
+  position: relative;
+  z-index: 1;
+  background: var(--graylight);
+}
+.spheres__link-back {
+  z-index: 0;
+  transform: rotateY(-180deg);
+  position: absolute;
+  border: 1px solid #000;
+  background: #fff;
+}
+.spheres__link {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+.spheres__link:hover .spheres__link-front {
+  z-index: 0;
+  transform: rotateY(180deg);
+}
+.spheres__link:hover .spheres__link-back {
+  z-index: 1;
+  transform: rotateY(0deg);
 }/*# sourceMappingURL=main.css.map */
