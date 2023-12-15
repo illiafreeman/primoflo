@@ -638,9 +638,11 @@ blockquote {
         flex-direction: column;
         border: 1px solid var(--bordercolor);
         .spheres__link-body{
-            max-height: 200px;
+            max-height: 400px;
             align-items: flex-start;
             overflow: auto;
+            flex-direction: column;
+            justify-content: flex-start;
         }
     }
     &__link {
@@ -648,7 +650,7 @@ blockquote {
         flex-direction: column;
         position: relative;
         overflow: hidden;
-        height: 400px;
+        height: 558px;
         &:hover, &.act{
             .spheres__link-front{
                 z-index: 0;

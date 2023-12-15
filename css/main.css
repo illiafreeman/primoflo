@@ -643,16 +643,18 @@ blockquote {
   border: 1px solid var(--bordercolor);
 }
 .spheres__link-back .spheres__link-body {
-  max-height: 200px;
+  max-height: 400px;
   align-items: flex-start;
   overflow: auto;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .spheres__link {
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  height: 400px;
+  height: 558px;
 }
 .spheres__link:hover .spheres__link-front, .spheres__link.act .spheres__link-front {
   z-index: 0;
